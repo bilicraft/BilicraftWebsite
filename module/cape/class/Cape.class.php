@@ -154,6 +154,8 @@ class Cape{
 		$dst = self::file_current();
 		$src = self::get_file_from_data($data);
 		copy($src, $dst);
+		import('texture', false);
+		Texture::update_uni(User::$last['username']);
 		return DB::replace([
 			'uid'       => User::$last['id'],
 			'cape_id'   => $data['id'],
