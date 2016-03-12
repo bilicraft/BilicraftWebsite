@@ -123,7 +123,10 @@ class Cape{
 		return $dir . $data['id'] . '.png';
 	}
 
-	public static function file_current(){
+	public static function file_current($player = false){
+		if(!$player){
+			$player = User::$last['username'];
+		}
 		$dir = RUNTIME_DIR_DATA;
 		if(!file_exists($dir)){
 			mkdir($dir);
@@ -132,7 +135,7 @@ class Cape{
 		if(!file_exists($dir)){
 			mkdir($dir);
 		}
-		return $dir . urlencode(User::$last['username']) . '.png';
+		return $dir . urlencode($player) . '.png';
 	}
 
 	public static function get_url_from_data($data){
