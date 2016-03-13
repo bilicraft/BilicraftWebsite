@@ -17,7 +17,7 @@ if(
 	IO::E('密码必须同时包含大小写字母及数字');
 }
 
-$r = JA::password($player, $password);
+$r = JA::change_password($player, $password);
 
 if($r){
 	IO::O();
