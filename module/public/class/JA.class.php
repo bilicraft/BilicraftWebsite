@@ -2,8 +2,8 @@
 
 class JA{
 
-	public $con_lobby = null;
-	public $con_main  = null;
+	public static $con_lobby = null;
+	public static $con_main  = null;
 
 	public static function ja_main(){
 		if(self::$con_main == null){
