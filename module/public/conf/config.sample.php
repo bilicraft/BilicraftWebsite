@@ -16,6 +16,18 @@ define('SQL_PWD', 'bcskin');
 define('SQL_DB', 'bcskin');    
 define('DB_DEBUG', true);
 
+define('JSONAPI_MAIN_HOST', '');
+define('JSONAPI_MAIN_PORT', '');
+define('JSONAPI_MAIN_USER', '');
+define('JSONAPI_MAIN_PASS', '');
+define('JSONAPI_MAIN_SALT', '');
+
+define('JSONAPI_LOBBY_HOST', '');
+define('JSONAPI_LOBBY_PORT', '');
+define('JSONAPI_LOBBY_USER', '');
+define('JSONAPI_LOBBY_PASS', '');
+define('JSONAPI_LOBBY_SALT', '');
+
 define('MD5_SALT', 'bcskin');
 
 define('COOKIES_PREFIX', 'bcs_');

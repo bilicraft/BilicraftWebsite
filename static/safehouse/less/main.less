@@ -1,0 +1,79 @@
+@import "../../public/less/ui.var.less";
+
+.shield{
+	position:fixed;
+	width:200px;
+	height:200px;
+	z-index:1;
+	font-size:200px;
+	color:rgb(96, 168, 76);
+	text-align:center;
+	line-height:200px;
+	background-color:rgba(0, 0, 0, .3);
+	border-radius:5px;
+	> .text{
+		position:absolute;
+		bottom:-30px;
+		left:0;
+		right:0;
+		height:30px;
+		line-height:30px;
+		text-align:center;
+		font-size:16px;
+		color:#fff;
+		> i{
+			display:inline-block;
+			width:20px;
+			height:20px;
+			border-radius:10px;
+			background-color:rgb(96, 168, 76);
+			line-height:20px;
+			text-align:center;
+			margin:5px 8px;
+			font-size:14px;
+		}
+	}
+	-webkit-transition:all ease-in 0.8s;
+    -moz-transition:all ease-in 0.8s;
+    -ms-transition:all ease-in 0.8s;
+    transition:all ease-in 0.8s;
+	animation:shield linear 2s forwards;
+	animation-delay:400ms;
+    opacity:0;
+}
+
+@keyframes shield {
+  0% {
+  	right:50%;
+	bottom:60%;
+	margin-right:-100px;
+	margin-bottom:-100px;
+    opacity:0;
+	transform:scale(.8);
+  }
+  10% {
+  	right:50%;
+	bottom:60%;
+	margin-right:-100px;
+	margin-bottom:-100px;
+    opacity:1;
+	transform:scale(1);
+  }
+  75%{
+  	right:50%;
+	bottom:60%;
+	margin-right:-100px;
+	margin-bottom:-100px;
+	opacity:1;
+	transform:scale(1);
+  }
+  100% {
+  	right:50%;
+	bottom:40px;
+	margin-right:-468px;
+	margin-bottom:0;
+	transform-origin:right bottom;
+	transform:scale(.4);
+	opacity:0.3;
+  }
+}
