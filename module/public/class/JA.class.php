@@ -47,7 +47,7 @@ class JA{
 	}
 
 	public static function kick_player($player){
-		return self::lobby_call('server.run_command', ["kick $player"]);
+		return self::main_call('server.run_command', ["kick $player"]);
 		// return self::main_call('players.name.kick', [$player, 'You were kicked from the website.']);
 	}
 
