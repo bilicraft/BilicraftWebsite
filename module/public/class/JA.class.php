@@ -40,7 +40,7 @@ class JA{
 			return false;
 		}
 		if($r[0]['success'] == null && isset($r[0]['is_success'])){
-			return $r[0]['is_success']
+			return $r[0]['is_success'];
 		}
 		return $r[0]['success'];
 	}
