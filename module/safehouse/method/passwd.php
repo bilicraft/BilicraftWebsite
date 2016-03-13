@@ -22,5 +22,5 @@ $r = JA::change_password($player, $password);
 if($r){
 	IO::O();
 }else{
-	IO::E('踢出失败，请联系管理员');
+	IO::E('修改失败，请联系管理员');
 }
