@@ -1,6 +1,6 @@
 <?php
 
-$player = User::$last['name'];
+$player = User::$last['username'];
 
 $r = JA::clean_player($player);
 

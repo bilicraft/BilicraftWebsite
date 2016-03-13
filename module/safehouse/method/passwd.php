@@ -1,6 +1,6 @@
 <?php
 
-$player   = User::$last['name'];
+$player   = User::$last['username'];
 $password = IO::I('password');
 
 if(strlen($password) < 8){
