@@ -34,7 +34,8 @@ class JA{
 			Log::error('jsonapi', [
 				'uid'    => empty(User::$last['id']) ? '0' : User::$last['id'],
 				'method' => $method,
-				'args'   => $args
+				'args'   => $args,
+				'return' => $r
 			]);
 			return false;
 		}
