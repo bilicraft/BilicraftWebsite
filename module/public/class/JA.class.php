@@ -47,7 +47,7 @@ class JA{
 	}
 
 	public static function kick_player($player){
-		return self::main_call('players.name.kick', [$player, 'You were kicked from the website.'])
+		return self::main_call('players.name.kick', [$player, 'You were kicked from the website.']);
 	}
 
 	public static function clean_player($player){
