@@ -12,7 +12,7 @@ if(preg_match('/\s/', $password) == 1){
 if(
 	(preg_match('/[A-Z]/', $password) !== 1) || 
 	(preg_match('/[a-z]/', $password) !== 1) ||
-	(preg_match('/[0-9]/', $password) !== 1) ||
+	(preg_match('/[0-9]/', $password) !== 1)
 	){
 	IO::E('密码必须同时包含大小写字母及数字');
 }
