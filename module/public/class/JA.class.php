@@ -39,6 +39,7 @@ class JA{
 			]);
 			return false;
 		}
+		Log::debug('jsonapi', $r);
 		return $r[0]['success'];
 	}
 
