@@ -63,7 +63,15 @@ class JA{
 		$file_list = self::main_call('files.list_directory', ['world/data']);
 		foreach ($file_list as $file) {
 			if(preg_match('/player-'.$player.'-/', $file)){
-				IO::E($file);
+				if(strpos($file, '.dat') !== FALSE){
+					return self::main_call('files.delete', $file);
+				}else{
+					Log::error('jsonapi_delete', [
+						'name' => $player,
+						'file' => $file
+					]);
+					return false;
+				}
 			}
 		}
 		return false;
