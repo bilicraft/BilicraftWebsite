@@ -62,7 +62,7 @@ class JA{
 	public static function clean_player($player){
 		$file_list = self::main_call('files.list_directory', ['world/data']);
 		foreach ($file_list as $file) {
-			if(preg_match('/player-'.$player.'-/', $file)){
+			if(preg_match('/player-'.$player.'-/', $file) === 1){
 				if(strpos($file, '.dat') !== FALSE){
 					return self::main_call('files.delete', $file);
 				}else{
