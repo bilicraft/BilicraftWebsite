@@ -49,12 +49,23 @@ class JA{
 		return self::lobby_call('server.run_command', ["authme changepassword $player $newpass"]);
 	}
 
-	public static function kick_player($player){
+	public static function kick_player_main($player){
 		return self::main_call('server.run_command', ["kick $player"]);
 		// return self::main_call('players.name.kick', [$player, 'You were kicked from the website.']);
 	}
 
+	public static function kick_player_lobby($player){
+		return self::lobby_call('server.run_command', ["kick $player"]);
+		// return self::main_call('players.name.kick', [$player, 'You were kicked from the website.']);
+	}
+
 	public static function clean_player($player){
+		$file_list = self::main_call('files.list_directory', ['world/data']);
+		foreach ($file_list as $file) {
+			if(preg_match('/player-'.$player.'-/', $file)){
+				IO::E($file);
+			}
+		}
 		return false;
 	}
 

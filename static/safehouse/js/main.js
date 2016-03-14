@@ -35,13 +35,30 @@ $(function(){
 			});
 		}
 	});
-	var btnKick = ui('#btn-kick', {
+	var btnKickMain = ui('#btn-kick-main', {
 		click : function(){
 			ui.confirm({
 				text : '确定要踢下线吗？',
 				okCallback : function(){
 					btnKick.loading(true);
-					G.method('safehouse.kick', function(c, d){
+					G.method('safehouse.kick_main', function(c, d){
+						btnKick.loading(false);
+						ui.notify('已踢');
+					}, function(c, m){
+						G.error(m);
+						btnKick.loading(false);
+					});
+				}
+			});			
+		}
+	});
+	var btnKickLobby = ui('#btn-kick-lobby', {
+		click : function(){
+			ui.confirm({
+				text : '确定要踢下线吗？',
+				okCallback : function(){
+					btnKick.loading(true);
+					G.method('safehouse.kick_lobby', function(c, d){
 						btnKick.loading(false);
 						ui.notify('已踢');
 					}, function(c, m){

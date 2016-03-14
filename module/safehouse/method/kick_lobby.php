@@ -2,7 +2,7 @@
 
 $player = User::$last['username'];
 
-$r = JA::kick_player($player);
+$r = JA::kick_player_lobby($player);
 
 if($r){
 	IO::O();
