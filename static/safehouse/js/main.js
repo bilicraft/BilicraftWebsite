@@ -40,7 +40,7 @@ $(function(){
 			ui.confirm({
 				text : '确定要踢下线吗？',
 				okCallback : function(){
-					btnKick.loading(true);
+					btnKickMain.loading(true);
 					G.method('safehouse.kick_main', function(c, d){
 						btnKick.loading(false);
 						ui.notify('已踢');
@@ -57,7 +57,7 @@ $(function(){
 			ui.confirm({
 				text : '确定要踢下线吗？',
 				okCallback : function(){
-					btnKick.loading(true);
+					btnKickLobby.loading(true);
 					G.method('safehouse.kick_lobby', function(c, d){
 						btnKick.loading(false);
 						ui.notify('已踢');
