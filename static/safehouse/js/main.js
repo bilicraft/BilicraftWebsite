@@ -42,11 +42,11 @@ $(function(){
 				okCallback : function(){
 					btnKickMain.loading(true);
 					G.method('safehouse.kick_main', function(c, d){
-						btnKick.loading(false);
+						btnKickMain.loading(false);
 						ui.notify('已踢');
 					}, function(c, m){
 						G.error(m);
-						btnKick.loading(false);
+						btnKickMain.loading(false);
 					});
 				}
 			});			
@@ -59,11 +59,11 @@ $(function(){
 				okCallback : function(){
 					btnKickLobby.loading(true);
 					G.method('safehouse.kick_lobby', function(c, d){
-						btnKick.loading(false);
+						btnKickLobby.loading(false);
 						ui.notify('已踢');
 					}, function(c, m){
 						G.error(m);
-						btnKick.loading(false);
+						btnKickLobby.loading(false);
 					});
 				}
 			});			
