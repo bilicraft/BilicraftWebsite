@@ -1,4 +1,4 @@
-![Bilicraft](http://bbs.bilicraft.io/s/static/public/img/title.png)
+![Bilicraft](http://bbs.bilicraft.com/static/public/img/title.png)
 # A Completely New DLC for Bilicraft VI!
 [bilicraft](http://bbs.bilicraft.io)
 
